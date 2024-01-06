@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.smol-css-grid {
+  --min: 15ch;
+  --gap: 1rem;
+
+  display: grid;
+  grid-gap: var(--gap);
+  /* min() with 100% prevents overflow
+  in extra narrow spaces */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+}
+
+#logo img {
+  display: block;
+  object-fit: scale-down;
+  width: 100%;
+  height: 64px;
+}
+
+header {
+  padding: 0;
+  margin: 0;
+}
+
+header h1 {
+  border: 1px solid red;
+  margin: 0;
+  padding: 0;
+}
+header h2 {
+  display: grid;
+  place-content: center;
+  border: 1px solid blue;
+  margin: 0;
+  padding: 0;
+}
+header ul {
+  list-style-type: none;
+  display: flex;
+  gap: 2ch;
+  border: 1px solid green;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  height: 64px;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+a:active {
+  text-decoration: none;
+}
+#Jesus > a{
+  font-weight: 700;
+  color: blue;
+} 
+#Jesus > a:hover {
+  color: red;
+}
+h1 > a {
+  color: black;
+}
+nav > ul > li > a:hover {
+  font-weight: 500;
+}
+footer {
+  border: 1px solid green;
+  padding: 0 2ch 0 2ch;
+  align-content: center;
+  text-align: center;
+  margin: 0;
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 1rem;
+  }
+}
+main {
+  border: 1px solid brown;
+  justify-self: start;
+  text-align: left;
+  margin: 0 auto;
+  padding: 2ch;
+  max-width: 80ch;
+}
